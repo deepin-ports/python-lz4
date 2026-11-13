@@ -1,14 +1,4 @@
-# uscan(1) configuration file.
-version=3
+version=4
 
-opts=\
-repacksuffix=+dfsg,\
-dversionmangle=s/\+dfsg//,\
- https://pypi.debian.net/lz4/lz4-(\d[\d\.]+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
-
-opts=\
-repacksuffix=+dfsg,\
-dversionmangle=s/\+dfsg//,\
-filenamemangle=s{.*/([^/#]+)#md5=[0-9a-f]+}{$1},\
- https://pypi.python.org/simple/lz4/ \
- .*/lz4-(\d[\d\.]+)\.tar\.(?:gz|bz2|xz)(?:#md5=[0-9a-f]+)
+opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%@PACKAGE@-$1.tar.gz%,repacksuffix=+dfsg,dversionmangle=auto" \
+   https://github.com/python-lz4/python-lz4/tags (?:.*?/)?v?(\d[\d.]*)\.tar\.gz

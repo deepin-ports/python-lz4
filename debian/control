@@ -1,23 +1,25 @@
 Source: python-lz4
 Section: python
 Priority: optional
-Standards-Version: 4.6.0
-Maintainer: Dmitry Smirnov <onlyjob@debian.org>
-Uploaders: Debian Python Team <team+python@tracker.debian.org>
-Build-Depends: debhelper-compat (= 12), dh-python, python3-all-dev
-    ,liblz4-dev
-    ,pkg-config
-#   ,python3-deprecation
-#   ,python3-future
-    ,python3-pkgconfig
-    ,python3-pytest-runner
-    ,python3-setuptools
-    ,python3-setuptools-scm
+Standards-Version: 4.7.2
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ python3-all-dev,
+ liblz4-dev,
+ pkgconf,
+ pybuild-plugin-pyproject,
+ python3-pkgconfig,
+ python3-psutil <!nocheck>,
+ python3-pytest <!nocheck>,
+ python3-setuptools,
+ python3-setuptools-scm,
 Homepage: https://github.com/python-lz4/python-lz4
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-lz4
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-lz4.git
-Testsuite: autopkgtest-pkg-python
-Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-pybuild
 
 Package: python3-lz4
 Architecture: any
@@ -29,5 +31,3 @@ Description: Python interface to the lz4 compression library (Python 3)
  speed at 400 MB/s per core, scalable with multi-cores CPU. It also
  features an extremely fast decoder, with speed in multiple GB/s per core,
  typically reaching RAM speed limits on multi-core systems.
- .
- This package is for Python 3.

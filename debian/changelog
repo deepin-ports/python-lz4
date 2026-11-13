@@ -1,8 +1,64 @@
-python-lz4 (4.0.2+dfsg-1deepin1) unstable; urgency=medium
+python-lz4 (4.4.5+dfsg-1) unstable; urgency=medium
 
-  * No source change upload against python 3.12.
+  * Team upload.
+  * New upstream release.
+  * Drop "Rules-Requires-Root: no", default as of dpkg-dev 1.22.13.
 
- -- Tianyu Chen <sweetyfish@deepin.org>  Sun, 07 Jul 2024 13:57:17 +0200
+ -- Colin Watson <cjwatson@debian.org>  Fri, 12 Dec 2025 13:42:36 +0000
+
+python-lz4 (4.4.4+dfsg-3) unstable; urgency=medium
+
+  * Team upload.
+  * Reupload due to operator error in driving "git debpush".
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 12 Oct 2025 12:34:10 +0100
+
+python-lz4 (4.4.4+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+  * Correct the import of _compression for Python 3.14 (closes: #1117907).
+
+ -- Colin Watson <cjwatson@debian.org>  Sun, 12 Oct 2025 12:27:46 +0100
+
+python-lz4 (4.4.4+dfsg-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Use pybuild-plugin-pyproject.
+  * Fix running (most) tests at build time.
+  * Switch to autopkgtest-pkg-pybuild.
+  * Standards-Version: 4.7.2.
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 25 Aug 2025 17:35:02 +0100
+
+python-lz4 (4.4.0+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Mark pytest to be test-only
+
+  [ Alexandre Detiste ]
+  * remove old obsolete comments
+
+ -- Bastian Germann <bage@debian.org>  Mon, 24 Mar 2025 07:43:01 +0100
+
+python-lz4 (4.4.0+dfsg-1) unstable; urgency=medium
+
+  * Team Upload
+  * Use dh-sequence-python3
+  * New upstream version 4.4.0+dfsg
+  * Swap Maintainer <-> Uploaders per new Team Policy
+  * Update lintian override for new format
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.6.1, no changes needed.
+
+  [ Andreas Tille ]
+  * Fix watch file (by pointing to Github)
+
+ -- Alexandre Detiste <tchet@debian.org>  Mon, 02 Dec 2024 15:57:03 +0100
 
 python-lz4 (4.0.2+dfsg-1) unstable; urgency=medium
 

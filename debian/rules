@@ -5,6 +5,12 @@
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all,-pie
 export PYBUILD_NAME=lz4
+# The stream bindings are considered experimental by upstream and not built
+# as part of the Debian package.
+export PYBUILD_TEST_ARGS = --ignore tests/stream
+# This test is unreasonably slow.
+PYBUILD_TEST_ARGS += -k 'not test_frame_5'
+export PYBUILD_AFTER_TEST = rm -f {build_dir}/testfile*
 
 %:
-	dh $@ --with python3 --buildsystem=pybuild
+	dh $@ --buildsystem=pybuild
